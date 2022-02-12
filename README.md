@@ -2,7 +2,7 @@
 
 # Sorting Algorithms
 
-#### This is a simple summary of the most popular sorting algorithm
+#### This is a simple summary of the most popular sorting algorithm.
 
 
 - Selection sort
