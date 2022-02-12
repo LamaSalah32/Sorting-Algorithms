@@ -27,7 +27,7 @@
 
 ```cpp
 #include<bits/stdc++.h>
-using namespace std ;
+using namespace std;
 
 int main(){
       int n; cin >> n;
@@ -64,7 +64,7 @@ int main(){
 
 ```cpp
 #include<bits/stdc++.h>
-using namespace std ;
+using namespace std;
 
 int main(){
       int n; cin >> n;
@@ -111,7 +111,7 @@ position in the sorted part.**
 
 ```cpp
 #include<bits/stdc++.h>
-using namespace std ;
+using namespace std;
 
 int main(){
       int n; cin >> n;
@@ -155,7 +155,7 @@ int main(){
 
 ```cpp
 #include<bits/stdc++.h>
-using namespace std ;
+using namespace std;
 
 int n;
 vector <int> arr;
@@ -216,7 +216,7 @@ int main(){
 
 ```cpp
 #include<bits/stdc++.h>
-using namespace std ;
+using namespace std;
 
 int n; 
 vector <int> arr;
