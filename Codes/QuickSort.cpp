@@ -9,15 +9,6 @@
 
 using namespace std ;
 
-void code (){
-    ios_base :: sync_with_stdio (false), cin.tie(0), cout.tie(0);
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt","w",stdout);
-    #endif
-}
-
-
 int n;
 vector <int> arr;
 
@@ -49,7 +40,6 @@ void QuickSort(int low, int high){
 
 
 int main(){
-      code();
       cin >> n;
       arr.resize(n);
       for (auto& i : arr) cin >> i;  
