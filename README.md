@@ -1,7 +1,7 @@
 <img src="Photos/neural.png" alt="Algo" width="100"/>  
 
 
-# sorting Algorithms
+# Sorting Algorithms
 
 #### This is a simple summary of the most popular sorting algorithm.
 
