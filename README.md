@@ -5,7 +5,7 @@
 #### This is a simple summary of the most popular sorting algorithm
 
 
-- selection sort
+- Selection sort
 - Bubble sort
 - Insertion sort
 - Quick sort
