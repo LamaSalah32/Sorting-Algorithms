@@ -17,7 +17,7 @@
 
 ## Selection sort
 
-**finding the minimum element from the unsorted part in an array and putting it at the beginning.**
+**Finding the minimum element from the unsorted part in an array and putting it at the beginning.**
 
 | Best case | Worst case |  Stable | In-place |
 | :-------: | :---------:| :-----: | :------: |
@@ -54,7 +54,7 @@ int main(){
 
 ## Bubble sort
 
-**works by repeatedly swapping the adjacent elements if they are in wrong order.**
+**Works by repeatedly swapping the adjacent elements if they are in wrong order.**
 
 | Best case | Worst case |  Stable | In-place |
 | :-------: | :---------:| :-----: | :------: |
@@ -140,7 +140,7 @@ int main(){
 
 ## Quick sort
 
-**QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and partitions the given array around the picked pivot**
+**QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and partitions the given array around the picked pivot.**
 
 | Best case | Worst case | Algorithmic Paradigm |  Stable | In-place |
 | :-------: | :---------:| :------------------: | :-----: | :------: |
