@@ -30,7 +30,6 @@
 using namespace std ;
 
 int main(){
-      code();
       int n; cin >> n;
       vector <int> arr(n);
       for (auto& i : arr) cin >> i;  //get elements of the array from user
@@ -68,7 +67,6 @@ int main(){
 using namespace std ;
 
 int main(){
-      code();
       int n; cin >> n;
       vector <int> arr(n);
       for (auto& i : arr) cin >> i;  //get the elements of array from user
@@ -116,7 +114,6 @@ position in the sorted part.**
 using namespace std ;
 
 int main(){
-      code();
       int n; cin >> n;
       vector <int> arr(n);
       for (auto& i : arr) cin >> i;  //get the elements of array from user
@@ -188,7 +185,6 @@ void QuickSort(int low, int high){
 }
 
 int main(){
-      code();
       cin >> n;
       arr.resize(n);
       for (auto& i : arr) cin >> i;  //get the elements of array from user
@@ -274,7 +270,6 @@ void mergeSort(int l, int r){
 }
 
 int main(){
-      code();
       cin >> n;
       arr.resize(n);
       for (auto& i : arr) cin >> i; 
