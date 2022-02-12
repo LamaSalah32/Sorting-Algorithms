@@ -1,12 +1,4 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define ull unsigned long long
-#define all(vec) vec.begin(), vec.end()
-#define cin(v) for (auto& i : v) cin >> i
-#define cout(v) for (auto& i : v) cout << i << " "; cout << "\n"
-#define ceil(a, b) ((a / b) + (a % b ? 1 : 0))
-#define mod 1000000007
-
 using namespace std ;
 
 int n; 
@@ -37,7 +29,6 @@ void merge(int l, int m , int r){
     }
 
     while(p1 < size_of_sub1){
-
         arr[k] = sub1[p1];
         p1++;
         k++;
@@ -62,6 +53,7 @@ void mergeSort(int l, int r){
 }
 
 int main(){
+      code();
       cin >> n;
       arr.resize(n);
       for (auto& i : arr) cin >> i; 
@@ -71,4 +63,4 @@ int main(){
       cout << "\n";
     
     return 0;
-}      
+}
