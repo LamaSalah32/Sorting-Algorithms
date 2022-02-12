@@ -53,7 +53,6 @@ void mergeSort(int l, int r){
 }
 
 int main(){
-      code();
       cin >> n;
       arr.resize(n);
       for (auto& i : arr) cin >> i; 
