@@ -1,7 +1,7 @@
 <img src="Photos/neural.png" alt="Algo" width="100"/>  
 
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%00000&lines=sorting+Algorithms)](https://git.io/typing-svg)
+# sorting Algorithms
 
 #### This is a simple summary of the most popular sorting algorithm.
 
