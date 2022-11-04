@@ -6,11 +6,11 @@
 #### This is a simple summary of the most popular sorting algorithm.
 
 
-- Selection sort
-- Bubble sort
-- Insertion sort
-- Quick sort
-- Merge sort
+- [Selection sort](#selection-sort)
+- [Bubble sort](#bubble-sort)
+- [Insertion sort](#insertion-sort)
+- [Quick sort](#quick-sort)
+- [Merge sort](#merge-sort)
 
 #### I hope this helps you :smiley:
 ---
