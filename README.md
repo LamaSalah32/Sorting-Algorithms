@@ -68,24 +68,28 @@ int main(){
 using namespace std;
 
 int main(){
-      int n; cin >> n;
-      vector <int> arr(n);
-      for (auto& i : arr) cin >> i;  //get the elements of array from user
+      int n;  cin >> n;
+    int arr[n];
 
-      for (int i = 0; i < n-1; i++){  //sorting elements by using Bubble sort Algorithm
-            bool ok = true;
-            for (int j = 1; j < n-i; j++){
-                  if (arr[j] < arr[j-1]){
-                        swap(arr[j], arr[j-1]); 
-                        ok = false;
-                  }
-            }
+    // get the elements of array from user.
+    for (int i = 0; i < n; i++){ 
+        cin >> arr[i];
+    }
 
-            if (ok) break;
-      }
+    // Sorting elements by using Bubble sort Algorithm.
+    for (int j = 0; j < n; j++){ 
+        for (int i = 1; i < n; i++){
 
-      for (auto& i : arr) cout << i << " ";  //print the elements in the array after sorting
-      cout << "\n";
+            // Compare adjacent elements in the array and swap them if they are out of order.
+            if (arr[i] < arr[i-1])
+                swap(arr[i], arr[i-1]);
+        }
+    }
+
+    // Print the sorted array.
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
     
     return 0;
 }
