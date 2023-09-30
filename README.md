@@ -31,21 +31,31 @@
 using namespace std;
 
 int main(){
-      int n; cin >> n;
-      vector <int> arr(n);
-      for (auto& i : arr) cin >> i;  //get elements of the array from user
+    int n;  cin >> n;
+    int arr[n];
 
-      for(int i = 0; i < n-1; i++){ //sorting elements by using selection sort Algorithm 
-            int minElementIdx = i; 
-            for(int j = i+1; j < n; j++){
-                  if (arr[j] < arr[minElementIdx]) minElementIdx = j; //find the minimum element in array  
-            }
+    // get the elements of array from user.
+    for (int i = 0; i < n; i++){ 
+        cin >> arr[i];
+    }
 
-            swap(arr[minElementIdx], arr[i]); //swap the minimum element with the first element 
-      }
+    // sorting elements by using selection sort Algorithm.     
+    for(int i = 0; i < n-1; i++){ 
+        int minElementIdx = i; 
 
-      for (auto& i : arr) cout << i << " ";  //print the elements in the array after sorting
-      cout << "\n";
+        // find the minimum element in array.
+        for(int j = i + 1; j < n; j++){
+            if (arr[j] < arr[minElementIdx]) minElementIdx = j;   
+        }
+
+        // swap the minimum element with the first element.
+        swap(arr[minElementIdx], arr[i]);  
+    }
+
+    // Print the sorted array.s
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
     
     return 0;
 }
@@ -68,7 +78,7 @@ int main(){
 using namespace std;
 
 int main(){
-      int n;  cin >> n;
+    int n;  cin >> n;
     int arr[n];
 
     // get the elements of array from user.
@@ -119,23 +129,29 @@ position in the sorted part.**
 using namespace std;
 
 int main(){
-      int n; cin >> n;
-      vector <int> arr(n);
-      for (auto& i : arr) cin >> i;  //get the elements of array from user
+    int n;  cin >> n;
+    int arr[n];
 
-      int k , j;
-      for (int i = 1; i < n; i++){
-            k = arr[i];
-            j = i - 1;
-            while (j >= 0 && arr[j] > k){
-                  arr[j+1] = arr[j];
-                  j--;
-            }
-            arr[j+1] = k;
-      }
-      
-      for (auto& i : arr) cout << i << " ";  //print the elements in the array after sorting
-      cout << "\n";
+    // get the elements of array from user.
+    for (int i = 0; i < n; i++){ 
+        cin >> arr[i];
+    }
+
+    // Sorting elements by using Insertion sort Algorithm.
+    for (int i = 1; i< n; i++){
+        int j = i-1, k = arr[i];
+        while (j >= 0 && arr[j] > k){
+            arr[j+1] = arr[j];
+            j--;
+        }
+
+        arr[j+1] = k;
+    }
+
+    // Print the sorted array.
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
     
     return 0;
 }
