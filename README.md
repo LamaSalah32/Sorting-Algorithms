@@ -239,66 +239,72 @@ int main(){
 #include<bits/stdc++.h>
 using namespace std;
 
-int n; 
-vector <int> arr;
+int arr[1000005];
 
-void merge(int l, int m , int r){
+// Merge function to merge two sorted subarrays.
+ll merge(int l, int mid, int r){
+    ll i = l, j = mid, cnt = 0;
+    vector<int> temp;
 
-    int size_of_sub1 = m - l + 1;
-    int size_of_sub2 = r-m;
-    vector <int> sub1(size_of_sub1), sub2(size_of_sub2);
-
-    for (int i = 0; i < size_of_sub1; i++) sub1[i] = arr[l+i];
-    for (int i = 0 ; i < size_of_sub2; i++) sub2[i] = arr[m + 1 + i];
-
-    int p1 = 0, p2= 0, k = l;
-
-    while (p1 < size_of_sub1 && p2 < size_of_sub2){
-        if (sub1[p1] < sub2[p2]){
-            arr[k] = sub1[p1];
-            p1++;
+    while (i < mid && j < r){
+        if (arr[i] > arr[j]){
+            cnt += mid - i;
+            temp.push_back(arr[j]);
+            j++;
         }
         else {
-            arr[k] = sub2[p2];
-            p2++;
-        } 
-
-        k++;
+            temp.push_back(arr[i]);
+            i++;
+        }
     }
 
-    while(p1 < size_of_sub1){
-        arr[k] = sub1[p1];
-        p1++;
-        k++;
-    }
-    while(p2 < size_of_sub2){
-        arr[k] = sub2[p2];
-        p2++;
-        k++;
+    // If there are remaining elements in the left subarray, add them to temp.
+    while (i < mid){
+        temp.push_back(arr[i]);
+        i++;
     }
 
+    // If there are remaining elements in the right subarray, add them to temp.
+    while (j < r){
+        temp.push_back(arr[j]);
+        j++;
+    }
+
+    for (int i = l; i < r; i++){
+        arr[i] = temp[i - l];
+    }
+
+    return cnt;
 }
 
-void mergeSort(int l, int r){
-    if (l < r){
+// Divide function to recursively split the array into smaller subarrays.
+ll divide(int l, int r){
+    if (l != r-1){
+        int mid = l + (r - l) / 2;
 
-        int m = l + (r-l)/2;
-        mergeSort(l, m);
-        mergeSort(m+1, r);
+        int inversion = divide(l, mid);
+        inversion += divide(mid, r);
+        inversion += merge(l, mid, r);
 
-        merge(l, m, r);
+        return inversion;
     }
+
+    return 0;
 }
 
 int main(){
-      cin >> n;
-      arr.resize(n);
-      for (auto& i : arr) cin >> i; 
-      mergeSort(0, n-1);
+    int n;  cin >> n;
+    for (int i = 0; i < n; i++){
+        cin >> arr[i];
+    }
 
-      for (auto& i : arr) cout << i << " ";  
-      cout << "\n";
-    
+    cout << "The number of inversions = " << divide(0, n) << "\n";
+
+    // Print the sorted array.
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
     return 0;
 }
 ```
